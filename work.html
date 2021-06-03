@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>媒体查询</title>
+	<style type="text/css">
+		#parent {
+			width: 100%;
+			display: flex;
+		}
+
+		#child1 {
+			background-color: red;
+			height: 60px;
+			text-align: center;
+
+		}
+
+		#child2 {
+			background-color: blue;
+			height: 60px;
+			text-align: center;
+
+		}
+
+		#child3 {
+			text-align: center;
+			background-color: black;
+			height: 60px;
+		}
+
+		#child4 {
+			background-color: orange;
+			height: 60px;
+			text-align: center;
+
+		}
+
+		p {
+			line-height: 60px;
+			display: inline;
+			color: white;
+		}
+
+		@media screen and (min-width:1200px) {
+			#child1 {
+				flex-grow: 1;
+			}
+
+			#child2 {
+				flex-grow: 1;
+			}
+
+			#child3 {
+				flex-grow: 1;
+			}
+
+			#child4 {
+				flex-grow: 1;
+			}
+		}
+
+		@media screen and (min-width:992px) and (max-width:1200px) {
+			#parent {
+				/* width: 100%; */
+				flex-wrap: wrap;
+			}
+			#child1 {
+				width: 100%;
+			}
+			#child2 {
+				flex-grow: 1;
+			}
+			#child3 {
+				flex-grow: 1;
+			}
+			#child4 {
+				flex-grow: 1;
+			}
+		}
+
+		@media screen and (min-width:768px) and (max-width:992px) {
+			#parent {
+				/* width: 100%; */
+				flex-wrap: wrap;
+			}
+			#child1 {
+				width: 50%;
+			}
+			#child2 {
+				width: 50%;
+			}
+			#child3 {
+				width: 50%;
+			}
+			#child4 {
+				width: 50%;
+			}
+		}
+		@media screen and (max-width:768px){
+			#parent {
+				flex-direction:column;
+			}			
+			#child1 {
+				flex-grow: 1;
+			}
+			#child2 {
+				flex-grow: 1;
+			}
+			#child3 {
+				flex-grow: 1;
+			}
+			#child4 {
+				flex-grow: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="parent">
+		<div id="child1">
+			<p>1</p>
+		</div>
+		<div id="child2">
+			<p>2</p>
+		</div>
+		<div id="child3">
+			<p>3</p>
+		</div>
+		<div id="child4">
+			<p>4</p>
+		</div>
+	</div>
+</body>
+
+</html>
